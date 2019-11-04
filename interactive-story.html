@@ -10,6 +10,8 @@
     
     <div id="intro">
         <h1>The RunAway Pumpkin</h1>
+        <h2> "The happiest town in the world. It's small but happy. Nothing ever went wrong. There lived a small pumpkin named Pumpkin. He goes on the same route to school everyday. He was as happy as can be, never showing any emotion that would appear sad/mad. Pumpkin has a pretty basic life, everythign was the same thing everyday. He never liked any new change. Life was good until one day. Pumpkin set out on his way to school but he noticed some signs saying construction ahead but he didn't think much aboout it. Going on with his walk he noticed that the whole street was blocked off."
+        </h2>
 
     <div id="story">
 
@@ -20,11 +22,11 @@
     </div>
 
     <script>
-          var BackgroundColor="Orange";
           
-          document.body.style.backgroundColor=BackgroundColor
+        var BackgroundColor="Orange";
           
-          
+        document.body.style.backgroundColor=BackgroundColor
+
         let storyContainer = document.getElementById("story");
     
         let buttonContainer = document.getElementById("buttons");
@@ -32,10 +34,9 @@
         
         let history = ["intro"];
         
-        
         const story = {
             intro : { //This is the intro to our story
-                text : "The happiest town in the world. It's small but happy. Nothing ever went wrong. There lived a small pumpkin named Pumpkin. He goes on the same route to school everyday. He was as happy as can be, never showing any emotion that would appear sad/mad. Pumpkin has a pretty basic life, everythign was the same thing everyday. He never liked any new change. Life was good until one day. Pumpkin set out on his way to school but he noticed some signs saying construction ahead but he didn't think much aboout it. Going on with his walk he noticed that the whole street was blocked off.",
+                text : "",
                 choices : [ //These choices will decide which branch the user is going to take.
                     ["Stick around and watch the construction take place" , "option1"], //This is branch number 1
                     ["Take a new route to school" , "option2"], //This is branch number 
@@ -46,16 +47,16 @@
             option1 : {
                 text : "Pumpkin sticks around and watches the construction take place. He goes away because the construction worker tells him to leave the site.", //This is the text that will show up if option 1 is chosen.
                 choices : [//This shows the user the different choices the user can chose from.
-                    ["Go to option4", "option4"]
+                    ["Go to make friends", "option4"]
                 ]
             },
             
             option2 : {
                 text : "Deciding it was better to find another way to school, he went around the construction site.", //This is the text that will show up if option 2 is chosen.
                 choices : [ //This shows the user the different choices the user can chose from.
-                    ["Go to option3", "option3"],//This tells us that if the user chose option 3, the option 3 text will load in.
-                    ["Go to option4", "option4"],//This tells us that if the user chose option 4, the option 5 text will load in.
-                    ["Go to option5", "option5"] //This tells us that if the user chose option 5, the option 5 text will load in.
+                    ["Go Home", "option3"],//This tells us that if the user chose option 3, the option 3 text will load in.
+                    ["Go make friends", "option4"],//This tells us that if the user chose option 4, the option 5 text will load in.
+                    ["Go to town", "option5"] //This tells us that if the user chose option 5, the option 5 text will load in.
                 ]
             },
             
@@ -63,14 +64,14 @@
                 text : "Seeing as how the road was blocked, Pumpkin decides to go home.",//This is the text that will show up if option 3 is chosen.
                 choices : [//This shows the user the different choices the user can chose from.
                     ["Go to option4", "option4"], //This tells us that if the user chose option 4, the option 4 text will load in.
-                    ["Go to otion5", "option5"] //This tells us that if the user chose option 5, the option 5 text will load in.
+                    ["Go to town", "option5"] //This tells us that if the user chose option 5, the option 5 text will load in.
                 ]
             },
             
             option4 : {
                 text : "Pumpkin meets a person on the way and becomes friends with them.", //This is the text that will show up if option 4 is chosen.
                 choices : [//This shows the user the different choices the user can chose from.
-                    ["Go to option5", "option5"] //This tells us that if the user chose option 5, the option 5 text will load in.
+                    ["Go to town", "option5"] //This tells us that if the user chose option 5, the option 5 text will load in.
                 ]
             },
             
