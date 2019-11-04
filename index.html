@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kaying and Jonathan's Interactive Story</title>
+</head>
+<body>
+    
+    <div id="intro">
+        <h1>The RunAway Pumpkin</h1>
+        <h2> "The happiest town in the world. It's small but happy. Nothing ever went wrong. There lived a small pumpkin named Pumpkin. He goes on the same route to school everyday. He was as happy as can be, never showing any emotion that would appear sad/mad. Pumpkin has a pretty basic life, everythign was the same thing everyday. He never liked any new change. Life was good until one day. Pumpkin set out on his way to school but he noticed some signs saying construction ahead but he didn't think much aboout it. Going on with his walk he noticed that the whole street was blocked off."
+        </h2>
+
+    <div id="story">
+
+    </div>
+
+    <div id="buttons">
+
+    </div>
+
+    <script>
+          
+        var BackgroundColor="Orange";
+          
+        document.body.style.backgroundColor=BackgroundColor
+
+        document.getElementById("buttons").style.width = "100px"; // width of the button
+        
+        document.getElementById("buttons").style.height = "1000px"; // height of the button
+
+        let storyContainer = document.getElementById("story");
+    
+        let buttonContainer = document.getElementById("buttons");
+        
+        
+        let history = ["intro"];
+        
+        const story = {
+            intro : { //This is the intro to our story
+                text : "",
+                choices : [ //These choices will decide which branch the user is going to take.
+                    ["Stick around and watch the construction take place" , "option1"], //This is branch number 1
+                    ["Take a new route to school" , "option2"], //This is branch number 
+                    ["Go back Home" , "option3"] //This is branch number 3 
+                ]
+            },
+            
+            option1 : {
+                text : "Pumpkin sticks around and watches the construction take place. He goes away because the construction worker tells him to leave the site.", //This is the text that will show up if option 1 is chosen.
+                choices : [//This shows the user the different choices the user can chose from.
+                    ["Go to make friends", "option4"]
+                ]
+            },
+            
+            option2 : {
+                text : "Deciding it was better to find another way to school, he went around the construction site.", //This is the text that will show up if option 2 is chosen.
+                choices : [ //This shows the user the different choices the user can chose from.
+                    ["Go Home", "option3"],//This tells us that if the user chose option 3, the option 3 text will load in.
+                    ["Go make friends", "option4"],//This tells us that if the user chose option 4, the option 5 text will load in.
+                    ["Go to town", "option5"] //This tells us that if the user chose option 5, the option 5 text will load in.
+                ]
+            },
+            
+            option3 : {
+                text : "Seeing as how the road was blocked, Pumpkin decides to go home.",//This is the text that will show up if option 3 is chosen.
+                choices : [//This shows the user the different choices the user can chose from.
+                    ["Go to option4", "option4"], //This tells us that if the user chose option 4, the option 4 text will load in.
+                    ["Go to town", "option5"] //This tells us that if the user chose option 5, the option 5 text will load in.
+                ]
+            },
+            
+            option4 : {
+                text : "Pumpkin meets a person on the way and becomes friends with them.", //This is the text that will show up if option 4 is chosen.
+                choices : [//This shows the user the different choices the user can chose from.
+                    ["Go to town", "option5"] //This tells us that if the user chose option 5, the option 5 text will load in.
+                ]
+            },
+            
+            option5 : {
+                text : "Pumpkin heads to town.",//This is the text that will show up if option 5 is chosen.
+                choices : [
+                   ["Go to option6", "option6"],
+                   ["Go to option7", "option7"],
+                   ["Go to option8", "option8"],
+                   ["Go to option9", "option9"],
+                   ["Go to option10", "option10"]
+                ]
+            },
+
+            option6 : { 
+                text : "Pumpkin go into an Arcade to play games.", //This is the text that will show up of option 6 is chosen.
+                choices : [
+                    ["Go to option 11", "option11"],
+                ]
+
+            },
+            option7 : {
+                text : "Pumpkin walks into a game stop to get new games.",//This is the text that will show up if option 7 is chosen.
+                choices : [
+                   ["Go to option11", "option11"],
+                ]
+            },
+            option8 : {
+                text : "Pumpkin goes into a library to pick out some books.",//This is the text that will show up if option 8 is chosen.
+                choices : [
+                   ["Go to option11", "option11"],
+                ]
+            },
+            option9: {
+                text : "Pumpkin goes to a restraunt to have a meel",//This is the text that will show up if option 9 is chosen.
+                choices : [
+                   ["Go to option11", "option11"],
+                ]
+            },
+            option10 : {
+                text : "While in town, pumpkin sees someone he knows, so he runs and hides in an abondoned house.",//This is the text that will show up if option 10 is chosen.
+                choices : [
+                   ["Go to option11", "option11"],
+                ]
+            },
+            option11 : {
+                text : "The Lights suddenly Turn off, leaving Pumpkin in the darkness, afraid.",//This is the text that will show up if option 5 is chosen.
+                choices : [
+                   ["Be a Coward", "beCoward"],
+                   ["Be a Hero", "becomeHero"]
+                ]
+            },
+            beCoward : {
+                text : "Pumpkin decides to let the other people in the town fix it while he waits.",//This is the text that will show up if Coward is chosen.
+                choices : [
+                   ["Wait for lights to come on", "wait"],
+                ]
+            },
+            becomeHero : {
+                text : "Pumpkin decides that he will be the one who goes out and turn the lights back on.",//This is the text that will show up if Hero is chosen.
+                choices : [
+                   ["Feeling brave? Click Here", "spookyForest"],
+                   ["Feeling scared? Click Here", "emptyRoad"]
+                ]
+            },
+            spookyForest : {
+                text : "Pumpkin decides to take a shortcut through the spooky forest to be able to switch the lights on easier.",//This is the text that will show up if spooky forest is chosen.
+                choices : [
+                   ["End", "ending2"],
+                   ["End", "ending3"]
+                ]
+            },
+            emptyRoad: {
+                text : "Pumpkin decides its safer to take the long way around to switch the lights on.",//This is the text that will show up if empty road is chosen.
+                choices : [
+                   ["End", "ending2"],
+                   ["End", "ending3"]
+                ]
+            },
+            wait : {
+                text : "Pumpkin waits until the lights come on and someone finds him.",//This is the text that will show up if waitis chosen.
+                choices : [
+                    ["End", "ending1"]
+
+                ]
+            },
+            ending1 : {//One branch of the ending
+                text : "Pumpkin returns to his everyday life.",//This is the text that will show up if End is chosen.
+                choices : [
+                ]
+            },
+            ending2 : { //One branch of the ending
+                text : "Pumpkin is a hero for being brave even though he was scared.",//This is the text that will show up if End is chosen.
+                choices : [
+                ]
+            },
+            ending3 : { //One branch of the ending
+                text : "Although Pumpkin isn't declared a hero, or given a big reward. Many people look up to him.",//This is the text that will show up if End is chosen.
+                choices : [
+                ]
+            },
+        }
+        function makeButton(btnText, choice){
+            let button = document.createElement("button");
+            button.innerHTML = btnText;
+            buttonContainer.appendChild(button);
+            button.addEventListener ("click", function() {
+                history.push(choice);
+                showStory();
+            });
+        }
+        function buildStory(text) {
+            let storyItem = document.createElement("p");
+            storyItem.innerText = text;
+            storyContainer.appendChild(storyItem);
+        }
+        function showStory(){
+            let currentPage = history[history.length - 1]; // set currentPage to last index of history array.
+            storyContainer.innerHTML = ""; // reset html
+            buttonContainer.innerHTML = ""; // reset buttons
+            
+            for(let page of history){ // build story text from items in history array
+                buildStory(story[page].text);
+            }
+            
+            for(let choice of story[currentPage].choices){ // build buttons from choices property of most recent story choice
+                makeButton(choice[0], choice[1])
+            }
+        }
+        showStory();
+        
+        
+    </script>
+      
+</body>
+</html>
