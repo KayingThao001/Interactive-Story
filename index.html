@@ -51,7 +51,8 @@
             option1 : {
                 text : "Pumpkin sticks around and watches the construction take place. He goes away because the construction worker tells him to leave the site.", //This is the text that will show up if option 1 is chosen.
                 choices : [//This shows the user the different choices the user can chose from.
-                    ["Go to make friends", "option4"]
+                    ["Meet someone and becomes friend with them.", "option4"],
+                    ["Goes Home", "option3"]
                 ]
             },
             
@@ -67,13 +68,13 @@
             option3 : {
                 text : "Seeing as how the road was blocked, Pumpkin decides to go home.",//This is the text that will show up if option 3 is chosen.
                 choices : [//This shows the user the different choices the user can chose from.
-                    ["Go to option4", "option4"], //This tells us that if the user chose option 4, the option 4 text will load in.
+                    ["Makes a friend along the way home", "option4"], //This tells us that if the user chose option 4, the option 4 text will load in.
                     ["Go to town", "option5"] //This tells us that if the user chose option 5, the option 5 text will load in.
                 ]
             },
             
             option4 : {
-                text : "Pumpkin meets a person on the way and becomes friends with them.", //This is the text that will show up if option 4 is chosen.
+                text : "Pumpkin meets a person on the way and becomes friends with them. Spend the following time together just hanging out until the friend had to leave. Pumpkin then decides to ", //This is the text that will show up if option 4 is chosen.
                 choices : [//This shows the user the different choices the user can chose from.
                     ["Go to town", "option5"] //This tells us that if the user chose option 5, the option 5 text will load in.
                 ]
@@ -142,17 +143,17 @@
                 ]
             },
             spookyForest : {
-                text : "Pumpkin decides to take a shortcut through the spooky forest to be able to switch the lights on easier.",//This is the text that will show up if spooky forest is chosen.
+                text : "Pumpkin decides to take a shortcut through the spooky forest to be able to switch the power generator back on faster.",//This is the text that will show up if spooky forest is chosen.
                 choices : [
-                   ["End", "ending2"],
-                   ["End", "ending3"]
+                   ["Get awarded", "ending2"],
+                   ["Get nothing", "ending3"]
                 ]
             },
             emptyRoad: {
                 text : "Pumpkin decides its safer to take the long way around to switch the lights on.",//This is the text that will show up if empty road is chosen.
                 choices : [
-                   ["End", "ending2"],
-                   ["End", "ending3"]
+                   ["Get awarded", "ending2"],
+                   ["Get nothing", "ending3"]
                 ]
             },
             wait : {
@@ -206,6 +207,7 @@
             }
         }
         showStory();
+
         
         
     </script>
